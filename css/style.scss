@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+// Colors
+
+// Primary
+$Pale-blue: hsl(225, 100%, 94%);
+$Bright-blue: hsl(245, 75%, 52%);
+
+// Neutral
+$Very-pale-blue: hsl(225, 100%, 98%);
+$Desaturated-blue: hsl(224, 23%, 55%);
+$Dark-blue: hsl(223, 47%, 23%);
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == mobile-S { //375px
+        @media screen and (max-width: 23.4375em ) { 
+            @content
+        }
+    };
+    @if $breakpoint == mobile-B { //428px
+        @media screen and (max-width: 26.75em ) { 
+            @content
+        }
+    };
+    @if $breakpoint == mobile-L { //738px
+        @media screen and (max-width: 46.125em ) { 
+            @content
+        }
+    };
+    
+    @if $breakpoint == tab { //960px
+        @media screen and (max-width: 60em ) { 
+            @content
+        }
+    };
+    @if $breakpoint == laptop-small { //1024px
+        @media screen and (max-width: 64em) {
+          @content;
+        }
+    };
+    @if $breakpoint == laptop-big { //1200px
+        @media screen and (max-width: 75em) {
+            @content;
+        }
+    };
+    @if $breakpoint == Desktop { //1440px
+        @media screen and (min-width: 90em) {
+            @content;
+        }
+    };
+}
+
+html{
+    font-size: 93.75%; //15px 15/16 * 100
+    font-family: "Red Hat Display";
+
+    // @include respond(Desktop) {
+    //     font-size: 100% ;
+    // };
+    // @include respond(laptop-big) {  // 14px 14/16 *100
+    //     font-size: 87.5% ;
+    // };
+    // @include respond(laptop-small) {  // 13px 13/16 *100
+    //     font-size: 81.25% ;
+    // };
+    // @include respond(tab) {  // 12px 12/16 *100
+    //     font-size: 75% ;
+    // };
+    // @include respond(mobile-L) {  // 10px 10/16 *100
+    //     font-size: 62.5% ;
+    // };
+    // @include respond(mobile-B) {  // 8px 8/16 *100
+    //     font-size: 50% ;
+    // };
+    // @include respond(mobile-S) {  // 8px 8/16 *100
+    //     font-size: 50% ;
+    // };
+}
+
+body {
+    box-sizing: border-box;
+    background-color: $Pale-blue;
+}
+
+section {
+    background-image: url(/images/pattern-background-desktop.svg);
+    @include respond(mobile-B){
+        background-image: url(/images/pattern-background-mobile.svg); 
+    }
+    // background-color: $Very-pale-blue;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: contain;
+}
+
+.card {
+    width: 22.375em;
+    // height: 32.625em;
+    margin: 0 auto;
+    padding-top: 8em;
+    @include respond(mobile-B){
+        padding-top: 6em;
+    }
+    .container {
+        border-radius: 1.25em;
+        text-align: center;
+        box-shadow: 0px 6px 20px 2px rgba(0, 0, 0, 0.25);
+        background-color: white;
+        .top{
+            img {
+                width: 100%;
+                border-radius: 1.25em 1.25em 0 0;
+            }
+        }
+        .bottom{
+            padding-top: 2em;
+            
+            .t1{
+                h3 {
+                    font-weight: 900;
+                    font-size: 1.5em ;
+                    color: $Dark-blue;
+                }
+                p {
+                    font-weight: 500;
+                    font-size: 0.75em;
+                    padding-top: 00.75em;
+                    width: 18.875em;
+                    margin: 0 auto;
+                    color: $Desaturated-blue;
+                }
+
+            }
+            .t2{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1em;
+                width: 16em;
+                margin: 0 auto;
+                background-color: $Very-pale-blue;
+                border-radius: 0.625em;
+                margin: 1.5em auto 1.25em auto;
+                &-a{
+                    display: flex;
+                    align-items: center;
+                    img{
+                        padding-right: 1em;
+                    }
+                    
+                    &-i{
+                        text-align: left;
+                        font-size: 0.75em;
+                        h3{
+                            color: $Dark-blue;
+                        }
+                        p{
+                            font-weight: 500;
+                            color: $Desaturated-blue;
+                        }
+                    }
+                }
+                &-b{
+                    font-size: 0.625em;
+                    font-weight: 700;
+                    color: $Bright-blue;
+                    &:hover,
+                    &:active{
+                        color: $Desaturated-blue;
+                        text-decoration: none;
+                    }
+                }
+
+            }
+            .t3{
+               padding-bottom: 2.5em;
+                .btn {
+                    width: fit-content;
+                    color: white;
+                    background-color: $Bright-blue;
+                    font-weight: 700;
+                    font-size: 0.75em;
+                    padding: 1em 5.6em;
+                    border-radius: .5em;
+                    margin: 0 auto;
+                    cursor: pointer;
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    &:hover,
+                    &:active{
+                        background-color: $Desaturated-blue;
+                    }
+                }
+                h4{
+                    font-weight: 700;
+                    font-size: 0.75em;
+                    padding-top: 1.25em;
+                    color: $Desaturated-blue;
+                    cursor: pointer;
+                    &:hover,
+                    &:active{
+                        color: $Dark-blue;
+                    }
+                }
+
+            }
+        }
+    }
+}
+

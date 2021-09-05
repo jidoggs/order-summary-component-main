@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 93.75%;
+  font-family: "Red Hat Display";
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #e0e8ff;
+}
+
+section {
+  background-image: url(/images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  height: 100%;
+  background-size: contain;
+}
+
+@media screen and (max-width: 26.75em) {
+  section {
+    background-image: url(/images/pattern-background-mobile.svg);
+  }
+}
+
+.card {
+  width: 22.375em;
+  margin: 0 auto;
+  padding-top: 8em;
+}
+
+@media screen and (max-width: 26.75em) {
+  .card {
+    padding-top: 6em;
+  }
+}
+
+.card .container {
+  border-radius: 1.25em;
+  text-align: center;
+  -webkit-box-shadow: 0px 6px 20px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 6px 20px 2px rgba(0, 0, 0, 0.25);
+  background-color: white;
+}
+
+.card .container .top img {
+  width: 100%;
+  border-radius: 1.25em 1.25em 0 0;
+}
+
+.card .container .bottom {
+  padding-top: 2em;
+}
+
+.card .container .bottom .t1 h3 {
+  font-weight: 900;
+  font-size: 1.5em;
+  color: #1f2f56;
+}
+
+.card .container .bottom .t1 p {
+  font-weight: 500;
+  font-size: 0.75em;
+  padding-top: 00.75em;
+  width: 18.875em;
+  margin: 0 auto;
+  color: #7280a7;
+}
+
+.card .container .bottom .t2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1em;
+  width: 16em;
+  margin: 0 auto;
+  background-color: #f5f7ff;
+  border-radius: 0.625em;
+  margin: 1.5em auto 1.25em auto;
+}
+
+.card .container .bottom .t2-a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card .container .bottom .t2-a img {
+  padding-right: 1em;
+}
+
+.card .container .bottom .t2-a-i {
+  text-align: left;
+  font-size: 0.75em;
+}
+
+.card .container .bottom .t2-a-i h3 {
+  color: #1f2f56;
+}
+
+.card .container .bottom .t2-a-i p {
+  font-weight: 500;
+  color: #7280a7;
+}
+
+.card .container .bottom .t2-b {
+  font-size: 0.625em;
+  font-weight: 700;
+  color: #3829e0;
+}
+
+.card .container .bottom .t2-b:hover, .card .container .bottom .t2-b:active {
+  color: #7280a7;
+  text-decoration: none;
+}
+
+.card .container .bottom .t3 {
+  padding-bottom: 2.5em;
+}
+
+.card .container .bottom .t3 .btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: white;
+  background-color: #3829e0;
+  font-weight: 700;
+  font-size: 0.75em;
+  padding: 1em 5.6em;
+  border-radius: .5em;
+  margin: 0 auto;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card .container .bottom .t3 .btn:hover, .card .container .bottom .t3 .btn:active {
+  background-color: #7280a7;
+}
+
+.card .container .bottom .t3 h4 {
+  font-weight: 700;
+  font-size: 0.75em;
+  padding-top: 1.25em;
+  color: #7280a7;
+  cursor: pointer;
+}
+
+.card .container .bottom .t3 h4:hover, .card .container .bottom .t3 h4:active {
+  color: #1f2f56;
+}
+/*# sourceMappingURL=style.css.map */
